@@ -27,6 +27,20 @@ const GlobalStyles = createGlobalStyle<{ theme: any }>`
       font-size: 13px;
     }
   }
+
+  .ReactModal__Overlay {
+    z-index: 7;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
 `;
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
